@@ -50,8 +50,18 @@ const App = () => {
 
   document.title = 'Reducer Todo App'; // Changed the html title element text 
 
+  const appStyles = {
+     width: '100%',
+     height: '100vh',
+     background: '#F9F1F1',
+     display: 'flex',
+     flexDirection: 'column',
+     alignItems: 'center',
+     fontFamily: "'Averia Sans Libre', cursive"
+  };
+
   return (
-    <div className='App'>
+    <div className='App' style={appStyles}>
       <Header />
       <TodoForm task={task} handleChange={handleChange} addTodo={addTodo} clearCompleted={clearCompleted} dispatch={dispatch} />
       <TodoList state={state} todo={todo} toggleCompleted={toggleCompleted} dispatch={dispatch} /> 

@@ -1,21 +1,30 @@
 import React from "react";
 
+import { Container, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+
 const TodoForm = props => {
     
     return (
-        <div className='form-container'>
-            <form class='todo-form'>
-                <input  
-                    type='text'
-					name='todo'
-					placeholder='Input todo item...'
-                    onChange={props.handleChange}
-                    value={props.task} 
-                />
-                <button onClick={props.addTodo}>Add Item</button>
-                <button onClick={props.clearCompleted}>Clear Completed</button>
-            </form>
-        </div>
+        <Container className='form-container'>
+            <Form class='todo-form' onSubmit={props.addTodo}>
+                <Label for="todoInput">
+                    <Col>
+                        <Input
+                            type='text'
+                            name='todo'
+                            id='todoInput'
+                            placeholder='Input todo item...'
+                            onChange={props.handleChange}
+                            value={props.task}
+                        />
+                    </Col>
+                </Label>    
+                <FormGroup>
+                    <Button color='primary' size='md'>Add Todo</Button>{'  '}
+                    <Button color='warning' size='md' onClick={props.clearCompleted}>Clear Completed</Button>
+                </FormGroup>
+            </Form>
+        </Container>
     )
 };
 
