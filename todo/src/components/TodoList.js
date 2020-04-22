@@ -1,7 +1,8 @@
 import React, { useReducer } from "react";
 import { reducer, todo } from '../reducers/reducer';
 
-export const TodoList = () => {
+
+const TodoList = () => {
 	// console.log(todo);
     const [state] = useReducer(reducer, todo); 
 
@@ -18,4 +19,6 @@ export const TodoList = () => {
 			})}
         </div>
     )
-}
+};
+
+export default TodoList;
