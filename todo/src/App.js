@@ -55,7 +55,7 @@ const App = () => {
     <div className='App'>
       <Header />
       <TodoForm task={task} handleChange={handleChange} addTodo={addTodo} clearCompleted={clearCompleted} dispatch={dispatch} />
-      <TodoList state={state} todo={todo} toggleCompleted={toggleCompleted} dispatch={dispatch} /> {/* Rendered the list of todos to the screen */}
+      <TodoList state={state} todo={todo} toggleCompleted={toggleCompleted} dispatch={dispatch} /> 
     </div>
   )
 };
