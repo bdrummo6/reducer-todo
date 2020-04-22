@@ -51,7 +51,6 @@ const App = () => {
   document.title = 'Reducer Todo App'; // Changed the html title element text 
 
   return (
-    
     <div className='App'>
       <Header />
       <TodoForm task={task} handleChange={handleChange} addTodo={addTodo} clearCompleted={clearCompleted} dispatch={dispatch} />
