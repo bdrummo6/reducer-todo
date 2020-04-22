@@ -1,5 +1,7 @@
 import React from "react";
 
+import Todo from './Todo';
+
 const TodoList = props => {
 
     return (
@@ -8,9 +10,12 @@ const TodoList = props => {
             {/* Mapped through the state data to render the list of todos */}
             {props.state.map(todo => {
                 return (
-					<div className='todo' key={todo.id} dispatch={props.dispatch}>
-						<p>{todo.task}</p>
-					</div>
+					<Todo 
+                        key={todo.id} 
+                        todo={todo}
+                        dispatch={props.dispatch} 
+                        toggleCompleted={props.toggleCompleted}
+                    />
 				)	
 			})}
         </div>
