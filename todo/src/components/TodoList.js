@@ -6,7 +6,7 @@ const TodoList = props => {
 
     return (
         <div className='todo-list'>
-			<h2>Todo List</h2>
+			<h2>Your Todo List</h2>
             {/* Mapped through the state data to render the list of todos */}
             {props.state.map(todo => {
                 return (

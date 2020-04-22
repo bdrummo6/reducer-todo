@@ -1,6 +1,7 @@
 import React, { useReducer, useState } from 'react';
 import { reducer, todo } from './reducers/reducer';
 
+import Header from './components/Header';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 
@@ -37,11 +38,23 @@ const App = () => {
         type: "TOGGLE_COMPLETED",
         payload: id
     });
-};
+  };
+
+  const clearCompleted = event => {
+    event.preventDefault();
+
+    dispatch({
+        type: "CLEAR_COMPLETED"
+    });
+  };
+
+  document.title = 'Reducer Todo App'; // Changed the html title element text 
 
   return (
+    
     <div className='App'>
-      <TodoForm task={task} handleChange={handleChange} addTodo={addTodo} dispatch={dispatch} />
+      <Header />
+      <TodoForm task={task} handleChange={handleChange} addTodo={addTodo} clearCompleted={clearCompleted} dispatch={dispatch} />
       <TodoList state={state} todo={todo} toggleCompleted={toggleCompleted} dispatch={dispatch} /> {/* Rendered the list of todos to the screen */}
     </div>
   )
