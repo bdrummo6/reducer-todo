@@ -29,11 +29,11 @@ const completedStyles = {
 const Todo = props => {
 	return (
 		<ListGroupItem 
-            className='todo-task'
+			className='todo-task'
 			style={props.todo.completed ?  completedStyles  :  incompletedStyles }
 			onClick={() => props.toggleCompleted(props.todo.id)}
 		>
-			 {props.todo.task}
+			{props.todo.task}
 		</ListGroupItem>
 	)
 };

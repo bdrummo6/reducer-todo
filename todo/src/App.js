@@ -22,7 +22,7 @@ const App = () => {
       if(!task.replace(/\s/g, '').length) { // Checks if the input only contains spaces
         setTask(''); // Resets input field if input only contains spaces
         alert('Please input a todo item.'); // Alerts user they must input something
-        return; // No todo item is added to the list
+        return; // No item is added to the list
       }
 
       dispatch({
