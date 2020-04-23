@@ -16,6 +16,7 @@ const TodoForm = props => {
                             placeholder='Input todo item...'
                             onChange={props.handleChange}
                             value={props.task}
+                            style={{ fontSize: '1.3rem', color: 'lightblue' }}
                         />
                     </Col>
                 </Label>    
