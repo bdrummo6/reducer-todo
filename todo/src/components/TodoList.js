@@ -20,7 +20,7 @@ const TodoList = props => {
         <Container style={{ width: '35%', marginTop: '15px' }}>
             <ListGroup style={listStyles}>
                 <h2 style={h2Styles}>Your Todo List</h2>
-                <h4>Number of Todos: <span style={{ fontWeight: 'bold', color: 'blue' ' }}>{props.state.length}</span></h4>
+                <h5>Number of Todos: <span style={{ fontWeight: 'bold', color: 'lightblue' }}>{props.state.length}</span></h5>
                 {/* Mapped through the state data to render the list of todos */}
                 {props.state.map(todo => {
                     return (
